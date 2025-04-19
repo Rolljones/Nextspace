@@ -1,0 +1,441 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+:root {
+    /* default colors */
+    
+    --color-dark:#000000;
+    --color-main:#FFFFFF;
+    --color-sub:#FAF4D3;
+    --color-text :#02312F;
+    --color-btn: #004643;
+    --color-par: #F8F9FA;
+
+    /* text sizes */
+    --pri-text:1rem;
+    --sec-text:1.1rem;
+    --pri-head:1.8rem;
+    --sec-head:5.5rem;
+}
+
+html {
+    font-family: "DM Sans", sans-serif;
+    font-size: 1.2vw;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-optical-sizing: auto;
+    scroll-behavior: smooth;
+    font-family: "DM Sans", sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+.container header {
+    padding:3rem 7rem 10rem;
+    background-image: url(./home/Background.svg);
+    background-size: cover;
+    width:100%;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--color-main);
+    border-radius: 5rem;
+    align-items: center;
+    padding: 0.4rem 0.4rem 0.4rem 2rem;
+    position: relative;
+}
+
+nav .nav-links {
+    list-style: none;
+    display: flex;
+    gap:2rem;
+}
+
+nav .nav-links > li {
+    position: relative;
+}
+
+.nav-links .drop-down > .down {
+    display: none;
+    position: absolute;
+}
+
+.down .drop-box {
+    background-color: var(--color-main);
+    top:100%;
+    left:0;
+    min-width: 12rem;
+    padding: 2rem 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+}
+
+.drop-box a {
+    white-space: nowrap;
+}
+
+.drop-down:hover .down {
+    display: block;
+}
+
+nav .nav-links > li a {
+    text-decoration: none;
+    font-size: var(--pri-text);
+    color:var(--color-text);
+    font-weight: 500;
+}
+
+nav .logo {
+    display: flex;
+    gap:0.5rem;
+    align-items: center;
+}
+
+nav .logo p {
+    font-size: var(--pri-head);
+    color: var(--color-text);
+    font-weight: 500;
+}
+
+nav .get-btn {
+    background-color: var(--color-btn);
+    color:var(--color-main);
+    border-radius: 2.5rem;
+    padding: 0.9rem 1.7rem;
+    border: none;
+    font-size: var(--sec-text);
+    cursor: pointer;
+}
+
+nav .burger {
+    display: none;
+    cursor: pointer;
+}
+
+/* Burger menu */
+nav .burger {
+    display: none;
+    cursor: pointer;
+}
+
+nav .burger > div {
+    width: 25px;
+    height: 3px;
+    background:var(--color-dark);
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+header .hero-head {
+    margin-top: 14rem;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-head h1 {
+    font-size: var(--sec-head);
+    font-weight: 500;
+    width: 42rem;
+    color:var(--color-main);
+    line-height: 6rem;
+}
+
+.hero-head img {
+    animation: rotate 10s linear infinite;
+    width: 12rem;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.hero-text {
+    display: flex;
+    justify-content: center;
+    gap:12rem;
+    margin-top: 3rem;
+}
+
+.hero-text p {
+    color:var(--color-main);
+    width: 25rem;
+    line-height: 1.8rem;
+    font-size: var(--pri-text);
+}
+
+.hero-text .appoint > button {
+    background-color: var(--color-btn);
+    color:var(--color-main);
+    padding: 0.9rem 1.7rem;
+    font-size: var(--sec-text);
+    border-radius: 2.5rem;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    gap:1rem;
+    align-items: center;
+    outline: none;
+}
+
+.appoint button > i {
+    transform:scaleX(-1);
+}
+
+/* Tablet Breakpoint */
+
+@media (min-width: 577px) and (max-width: 820px) {
+
+    html {
+        font-size: 2vw;
+    }
+
+    .container header {
+        padding: 1rem 2rem;
+    }
+
+    .container header {
+        padding-bottom: 3rem;
+    }
+
+    nav .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 5rem;
+        right: 0;
+        width: 100%;
+        max-height: 0;
+        background: rgba(255, 255, 255);
+        text-align:left;
+        padding: 2rem;
+        border-radius: 1rem;
+        transition: max-height 0.4s ease-in-out;
+        z-index: 1;
+    }
+
+    nav .nav-links.open {
+        display: flex;
+        max-height: 13rem;
+    }
+
+    nav .burger {
+        display: block;
+        transition: transform 0.3s ease;
+    }
+
+    /* Burger animation */
+     nav .burger.toggle > .line1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    nav .burger.toggle > .line2 {
+        opacity: 0;
+    }
+
+    nav .burger.toggle > .line3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    .nav-links .drop-down {
+        position: relative;
+    }
+
+    .drop-down .down {
+        position: absolute;
+        z-index: 2;
+    }
+
+    header .hero-head {
+        margin-top: 5rem;
+        display: flex;
+        justify-content: center;
+        position: relative;
+    }
+
+    .hero-head h1 {
+        width: 100%;
+        text-align: center;
+        font-size: 3rem;
+        line-height: 3rem;
+        width:40rem
+    }
+
+    .hero-head img {
+        width: 9rem;
+        position: absolute;
+        left: 35rem;
+        bottom:-1.5rem
+    }
+
+    .hero-text {
+        display: flex;
+        gap:2rem;
+        margin-top: 3rem;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-text p {
+        font-size: 1.5rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero-text .appoint > button {
+        background-color: var(--color-btn);
+        color:var(--color-main);
+        padding: 1.3rem 1.7rem;
+        font-size: var(--sec-text);
+        border-radius: 2.5rem;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        gap:1rem;
+        align-items: center;
+    }
+}
+
+/* Phone breakpoint */
+
+@media (max-width: 576px) {
+    
+    html {
+        font-size: 3vw;
+    }
+
+    .container header {
+        padding: 1rem 2rem;
+    }
+
+    header nav {
+        padding: 0.4rem 2rem;
+    }
+
+    nav .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 5rem;
+        right: 0;
+        width: 100%;
+        max-height: 0;
+        background: rgba(255, 255, 255);
+        text-align:left;
+        padding: 2rem;
+        border-radius: 1rem;
+        transition: max-height 0.4s ease-in-out;
+    }
+
+    nav .nav-links.open {
+        display: flex;
+        max-height: 13rem;
+    }
+
+    nav .get-btn {
+        display: none;
+    }
+
+    nav .burger {
+        display: block;
+        transition: transform 0.3s ease;
+    }
+
+    /* Burger animation */
+     nav .burger.toggle > .line1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    nav .burger.toggle > .line2 {
+        opacity: 0;
+    }
+
+    nav .burger.toggle > .line3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    .nav-links .drop-down {
+        position: relative;
+    }
+
+    .drop-down .down {
+        position: absolute;
+        z-index: 2;
+    }
+
+    header .hero-head {
+        margin-top: 5rem;
+        display: flex;
+        justify-content: center;
+        position: relative;
+    }
+
+    .hero-head h1 {
+        width: 100%;
+        text-align: center;
+        font-size: 3rem;
+        line-height: 3rem;
+        width:40rem
+    }
+
+    .hero-head img {
+        width: 9rem;
+        position: absolute;
+        left: 20rem;
+        bottom:-1.5rem
+    }
+
+    .hero-text {
+        display: flex;
+        gap:2rem;
+        margin-top: 3rem;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-text p {
+        font-size: 1.5rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero-text .appoint > button {
+        background-color: var(--color-btn);
+        color:var(--color-main);
+        padding: 1.3rem 1.7rem;
+        font-size: var(--sec-text);
+        border-radius: 2.5rem;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        gap:1rem;
+        align-items: center;
+    }
+}
