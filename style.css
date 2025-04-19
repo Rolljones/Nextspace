@@ -14,7 +14,7 @@
     /* text sizes */
     --pri-text:1rem;
     --sec-text:1.1rem;
-    --pri-head:1.8rem;
+    --pri-head:2.5rem;
     --sec-head:5.5rem;
 }
 
@@ -114,7 +114,7 @@ nav .logo {
 }
 
 nav .logo p {
-    font-size: var(--pri-head);
+    font-size: 1.8rem;
     color: var(--color-text);
     font-weight: 500;
 }
@@ -208,6 +208,92 @@ header .hero-head {
 .appoint button > i {
     transform:scaleX(-1);
 }
+
+main #about {
+    padding:7rem;
+}
+
+main #about > h3 {
+    color:var(--color-text);
+    font-size: var(--pri-text);
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+#about .about {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about h2 {
+    font-size: var(--pri-head);
+    color:var(--color-text);
+    font-weight: 500;
+    width:20rem;
+}
+
+.about p {
+    width: 44rem;
+    font-size: 1.8rem;
+    color: var(--color-text);
+}
+
+#scroll {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+  }
+  
+#scroll .scroll-content {
+    display: inline-flex;
+    animation: scroll 20s linear infinite;
+    align-content: flex-start;
+  }
+  
+#scroll .scroll-content > img {
+    width: 20rem;
+    height: auto;
+  }
+  
+  /* Animation keyframes */
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  #acomplish-flex {
+    padding:7rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #acomplish-flex .acomplish {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem
+  }
+
+  .acomplish h1 {
+    font-size: 5rem;
+    color: var(--color-btn);
+    font-weight: 500;
+  }
+
+  .acomplish h4 {
+    font-size: 1.1rem;
+    color: var(--color-text);
+  }
+
+  .acomplish p {
+    font-size: 0.9rem;
+    color: #525B5B;
+    width: 12rem;
+  }
 
 /* Tablet Breakpoint */
 
@@ -321,6 +407,25 @@ header .hero-head {
         gap:1rem;
         align-items: center;
     }
+
+    main #about {
+        padding:4rem 2rem;
+    }
+
+    #about .about {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    #acomplish-flex {
+        padding:4rem 2rem;
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        place-items: center;
+      }
+    
 }
 
 /* Phone breakpoint */
@@ -332,7 +437,7 @@ header .hero-head {
     }
 
     .container header {
-        padding: 1rem 2rem;
+        padding: 1rem 2rem 3rem;
     }
 
     header nav {
@@ -409,7 +514,7 @@ header .hero-head {
     .hero-head img {
         width: 9rem;
         position: absolute;
-        left: 20rem;
+        left: 19rem;
         bottom:-1.5rem
     }
 
@@ -439,4 +544,26 @@ header .hero-head {
         gap:1rem;
         align-items: center;
     }
+
+    main #about {
+        padding:4rem 2rem;
+    }
+
+    #about .about {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .about p {
+        width: 28.5rem;
+    }
+
+    #acomplish-flex {
+        padding:4rem 2rem;
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        place-items: center;
+      }
 }
