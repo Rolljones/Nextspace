@@ -347,10 +347,11 @@ header .hero-head {
         right: 0;
         width: 100%;
         max-height: 0;
-        background: rgba(255, 255, 255);
+        background: #FFFFFF;
         text-align:left;
         padding: 2rem;
         border-radius: 1rem;
+        z-index: 1;
         transition: max-height 0.4s ease-in-out;
     }
 
