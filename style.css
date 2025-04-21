@@ -1118,6 +1118,7 @@ main #unlock > .unlock-flex {
         background-size: cover;
         height: auto;
         width: 100%;
+        background-position: center -3.5rem;
     }
     
     main #unlock > .unlock-flex {
