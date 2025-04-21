@@ -856,6 +856,45 @@ main #works {
     flex-direction: column;
     gap:5rem;
 }
+
+main #unlock {
+    padding: 3rem 2rem;
+    background-image: url(./home/Section.svg);
+    background-size: cover;
+    height: auto;
+    width: 100%;
+}
+
+main #unlock > .unlock-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:2rem;
+}
+
+.unlock-flex .head-text {
+    width: 100%;
+}
+
+.unlock-flex .head-text > h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 3rem;
+    line-height: 3rem;
+}
+
+#unlock .head-info > p {
+    color:var(--color-main);
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    text-align: center;
+}
+
+.head-info .head-btn {
+    display: flex;
+    justify-content: center;
+    gap:2rem;
+}
     
 }
 
@@ -1071,5 +1110,44 @@ main #works {
         display: flex;
         flex-direction: column;
         gap:5rem;
+    }
+
+    main #unlock {
+        padding: 3rem 2rem;
+        background-image: url(./home/Section.svg);
+        background-size: cover;
+        height: auto;
+        width: 100%;
+    }
+    
+    main #unlock > .unlock-flex {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap:2rem;
+    }
+    
+    .unlock-flex .head-text {
+        width: 100%;
+    }
+    
+    .unlock-flex .head-text > h1 {
+        width: 100%;
+        text-align: center;
+        font-size: 3rem;
+        line-height: 3rem;
+    }
+    
+    #unlock .head-info > p {
+        color:var(--color-main);
+        font-size: 1.5rem;
+        line-height: 1.8rem;
+        text-align: center;
+    }
+    
+    .head-info .head-btn {
+        display: flex;
+        justify-content: center;
+        gap:2rem;
     }
 }
