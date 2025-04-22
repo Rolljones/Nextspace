@@ -1171,6 +1171,10 @@ main #question {
     gap: 3rem;
 }
 
+#question .quest-flex > h2 {
+    width: 100%;
+}
+
 .faq .faq-item {
     width: 100%;
     border: 1.5px solid #cdcdcd;
@@ -1476,6 +1480,10 @@ footer .second-foot > .four {
         display: flex;
         flex-direction: column;
         gap: 3rem;
+    }
+
+    #question .quest-flex > h2 {
+        width: 100%;
     }
     
     .faq .faq-item {
