@@ -203,6 +203,12 @@ header .hero-head {
     gap:1rem;
     align-items: center;
     outline: none;
+    transition: 0.5s ease;
+}
+
+.hero-text .appoint > button:hover {
+    background: transparent;
+    border: 1.5px solid #F8F9FA;
 }
 
 .appoint button > i {
@@ -415,6 +421,13 @@ main #service {
     gap:1rem;
     align-items: center;
     outline: none;
+    transition:background-color 0.5s ease;
+}
+
+.service-flex .appoint > button:hover {
+    border: 1.5px solid #525B5B;
+    background: transparent;
+    color:var(--color-dark)
 }
 
 .service-flex .appoint > button i {
@@ -426,7 +439,6 @@ main #service {
     justify-content: space-between;
     gap:2rem;
     align-items: baseline;
-    margin:5rem 1rem 0 0;
 }
 
 #service .layout-flex > .layout {
@@ -435,10 +447,12 @@ main #service {
     align-items: center;
     text-align: center;
     gap:1rem;
+    margin-top: 7rem;
 }
 
 .layout-flex .layout > img {
     margin-bottom: 2rem;
+    width: 100%;
 }
 
 .layout-flex .layout > h4 {
@@ -509,6 +523,7 @@ main #works {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    color:var(--color-text)
 }
 
 #works .works > h3 {
@@ -543,6 +558,7 @@ main #works {
 .hyper .locate > p:last-child {
     font-size: 1rem;
     font-weight: 300;
+    color: #525B5B;
 
 }
 
@@ -572,6 +588,13 @@ main #works {
     outline: none;
     background: transparent;
     color:var(--color-dark);
+    transition: all 0.5s ease;
+}
+
+#works .workss > button:hover {
+    background-color: var(--color-btn);
+    color:var(--color-main);
+    border:none;
 }
 
 .workss button > i {
@@ -582,6 +605,7 @@ main #unlock {
     padding: 7rem;
     background-image: url(./home/Section.svg);
     background-size: cover;
+    width: 100%;
     height: 50rem;
 }
 
@@ -631,6 +655,13 @@ main #unlock > .unlock-flex {
     gap:1rem;
     align-items: center;
     outline: none;
+    transition: background-color 0.5s ease;
+}
+
+.head-info .head-btn > button:first-child:hover {
+    background: transparent;
+    color: var(--color-main);
+    border: 1.5px solid #F8F9FA;
 }
 
 .head-btn button > i {
@@ -649,7 +680,108 @@ main #unlock > .unlock-flex {
     align-items: center;
     outline: none;
     background: transparent;
+    transition: 0.5s ease;
 }
+
+.head-info .head-btn > button:last-child:hover {
+    background-color: var(--color-btn);
+    border: none;
+}
+
+main #question {
+    padding: 7rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 6rem;
+}
+
+#question .quest-flex {
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+}
+
+.quest-flex h3 {
+    font-size: var(--pri-text);
+    font-weight: 500;
+    color:var(--color-text);
+}
+
+.quest-flex h2 {
+    font-size: var(--pri-head);
+    color:var(--color-text);
+    width:15rem;
+    font-weight: 500;
+}
+
+.quest-flex button {
+    width: 12rem;
+    background-color: var(--color-btn);
+    font-size: var(--sec-text);
+    color:var(--color-main);
+    padding: 0.9rem 1.7rem;
+    border-radius: 2.5rem;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    gap:1rem;
+    align-items: center;
+    outline: none;
+    transition: background-color 0.5s ease;
+}
+
+.quest-flex button:hover {
+    background: transparent;
+    color: var(--color-dark);
+    border: 1.5px solid #525B5B;
+}
+
+.quest-flex button > i {
+    transform:scaleX(-1);
+}
+
+.faq {
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+}
+
+.faq .faq-item {
+    max-width: 100%;
+    border: 1.5px solid #eaeaea;
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+}
+
+.faq .faq-item > .faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color:var(--color-text)
+}
+
+.faq-icon {
+    transition: transform 0.3s ease;
+    font-size: 1.5rem;
+  }
+  
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    padding:0 7rem;
+  }
+  
+  .faq-item.active .faq-answer {
+    max-height: 20rem;
+    padding: 1rem 7rem;
+  }
+  
+  .faq-item.active .faq-icon {
+    transform: rotate(180deg); /* Arrow flips */
+  }
 
 
 /* Tablet Breakpoint */
@@ -833,7 +965,7 @@ main #service {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin: 0;
+    margin-top: 3rem;
 }
 
 .layout-flex .layout > img {
@@ -894,6 +1026,28 @@ main #unlock > .unlock-flex {
     display: flex;
     justify-content: center;
     gap:2rem;
+}
+
+main #question {
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.faq .faq-item {
+    width: 100%;
+    border: 1.5px solid #cdcdcd;
+    padding: 1.5rem;
+    border-radius: 1rem;
+}
+
+.faq .faq-item > .faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 500;
 }
     
 }
@@ -1087,7 +1241,7 @@ main #unlock > .unlock-flex {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        margin: 0;
+        margin-top:3rem;
         text-align: left;
     }
     
@@ -1118,7 +1272,7 @@ main #unlock > .unlock-flex {
         background-size: cover;
         height: auto;
         width: 100%;
-        background-position: center -3.5rem;
+        background-position: -3.5rem;
     }
     
     main #unlock > .unlock-flex {
@@ -1151,4 +1305,38 @@ main #unlock > .unlock-flex {
         justify-content: center;
         gap:2rem;
     }
+
+    main #question {
+        padding: 3rem 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+    
+    .faq .faq-item {
+        width: 100%;
+        border: 1.5px solid #cdcdcd;
+        padding: 1.5rem;
+        border-radius: 1rem;
+    }
+
+    .faq .faq-item > .faq-question {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.8rem;
+        font-weight: 500;
+    }
+
+    .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease, padding 0.3s ease;
+        padding:0 2rem;
+      }
+      
+      .faq-item.active .faq-answer {
+        max-height: 20rem;
+        padding: 1rem 2rem;
+      }
 }
