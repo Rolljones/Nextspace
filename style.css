@@ -88,7 +88,7 @@ nav .nav-links > li {
     min-width: 12rem;
     padding: 2rem 1rem 1rem;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     gap:1rem;
 }
 
@@ -1338,8 +1338,9 @@ footer .second-foot > .four {
         align-items: center;
     }
 
+
     main #about {
-        padding:4rem 2rem;
+        padding:4rem 2rem; 
     }
 
     #about .about {
