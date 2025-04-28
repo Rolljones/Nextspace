@@ -300,9 +300,10 @@ main .contact-info {
     font-weight: 500;
 } 
 
-.second .right > p {
+.second .right > a {
     color: #7f8888;
     font-size: 1rem;
+    text-decoration: none;
 }
 
 .contact-info .third {
@@ -776,6 +777,21 @@ footer .second-foot > .sixx a {
     .form p {
         width: 100%;
     }
+
+    
+form button {
+    background: transparent;
+    border: 1.5px solid #FFFFFF;
+    font-size: var(--sec-text);
+    color:var(--color-main);
+    padding: 0.9rem 1.7rem;
+    border-radius: 2.5rem;
+    cursor: pointer;
+    display: flex;
+    gap:1rem;
+    align-items: center;
+    width: 15rem;
+}
 
     .container #unlock {
         padding: 3rem 2rem;
