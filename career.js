@@ -21,13 +21,3 @@ const faders = document.querySelectorAll('.fade-in');
         burger.classList.toggle("toggle");
     });
 });
-
-
-document.getElementById("contactForm").addEventListener("submit", function(e) {
-  e.preventDefault(); // Prevent actual form submission
-
-  alert("Your message has been sent!");
-
-  // Clear form fields
-  this.reset();
-});
